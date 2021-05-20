@@ -4,7 +4,7 @@
 # Train command: python train.py --data cityscapes.yaml
 # Default dataset location is next to /yolov5:
 #   /parent_folder
-#     /coco
+#     /yolov5
 #     /cityscape
 # you need to download dataset manually!!!!
 # Download/unzip labels
@@ -30,4 +30,4 @@ for i in "${!names[@]}"; do
 done
 
 
-python 'citytscape_tools.py'
+python './data/scripts/citytscape_tools.py'
