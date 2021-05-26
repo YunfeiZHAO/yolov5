@@ -194,7 +194,7 @@ def plot_pr_curve(px, py, ap, save_dir='pr_curve.png', names=()):
     else:
         ax.plot(px, py, linewidth=1, color='grey')  # plot(recall, precision)
 
-    ax.plot(px, py.mean(1), linewidth=3, color='blue', label='all classes %.3f mAP@0.5' % ap[:, 0].mean())
+    ax.plot(px, py.mean(1), linewidth=3, color='red', label='all classes %.3f mAP@0.5' % ap[:, 0].mean())
     ax.set_xlabel('Recall')
     ax.set_ylabel('Precision')
     ax.set_xlim(0, 1)
@@ -214,7 +214,7 @@ def plot_mc_curve(px, py, save_dir='mc_curve.png', names=(), xlabel='Confidence'
         ax.plot(px, py.T, linewidth=1, color='grey')  # plot(confidence, metric)
 
     y = py.mean(0)
-    ax.plot(px, y, linewidth=3, color='blue', label=f'all classes {y.max():.2f} at {px[y.argmax()]:.3f}')
+    ax.plot(px, y, linewidth=3, color='red', label=f'all classes {y.max():.2f} at {px[y.argmax()]:.3f}')
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
     ax.set_xlim(0, 1)

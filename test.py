@@ -342,3 +342,5 @@ if __name__ == '__main__':
             np.savetxt(f, y, fmt='%10.4g')  # save
         os.system('zip -r study.zip study_*.txt')
         plot_study_txt(x=x)  # plot
+
+# python test.py --weights yolov5x6_idd_best.pt --data idd.yaml --img 1280 --save-txt --batch-size 1 --verbose
